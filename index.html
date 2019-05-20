@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>drzewRun</title>
+</head>
+<body>
+
+  <div>
+    <p>Wprowadź kod poniżej:</p>
+    Name: <input type="text" id="geoCode" value="">
+    <button onclick="getImageFromCode()">Sprawdź kod!</button>
+    <p><img src="" id="pictureFromCode"/></p>
+  </div>
+
+<script>
+  function getImageFromCode() {
+
+    var theImages = {"A1": "images/01.jpg", "B1": "images/02.jpg", "C1": "images/03.jpg"};
+    code = document.getElementById("geoCode").value;
+    console.log(code);
+    console.log(theImages[code]);
+
+    document.getElementById("pictureFromCode").src = theImages[code]
+    document.getElementById("pictureFromCode").width = 1024;
+  }
+</script>
+
+</body>
+</html>
